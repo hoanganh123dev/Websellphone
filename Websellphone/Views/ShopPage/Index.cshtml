@@ -1,0 +1,87 @@
+﻿@model HomeViewModel
+@inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
+@using SellPhoneVIewModel.Catalog.Products;
+@{
+    var culture = CultureInfo.CurrentCulture.Name;
+}
+@{
+    ViewData["Title"] = "Shop Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}	
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2 localize-content>Shop</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <!-- Sidebar content -->
+            @await Component.InvokeAsync("SideBar")
+        </div>
+        <div class="col-md-9">
+            <!-- Single product area content -->
+            <div class="single-product-area">
+                <!-- ... -->
+                <div class="zigzag-bottom"></div>
+                <div class="container">                   
+                    <ul class="row row-cols-3 list-unstyled">
+                        @foreach (var item in Model.FeaturedProducts)
+                        {                          
+                            var url = $"/{culture}/{_loc["productUrl"]}/{item.Id}";
+                            <li class="col-md-3">
+                                <div class="single-shop-product">
+                                    <div class="product-upper">
+                                        <a href="@url"> <img src="@(Configuration["BaseAddress"] + item.ThumbnailImage)" alt="@item.Name"></a>
+                                    </div>
+                                    <h2><a href="">@item.Name</a></h2>
+                                    <div class="product-carousel-price">
+                                        <ins>@item.Price</ins>
+                                    </div>
+
+                                    <div class="product-option-shop">
+                                        <a href="#" data-id="@item.Id" class="add_to_cart_button btn-add-cart"><localize>Add to cart</localize></a>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="product-pagination text-center">
+                                <nav>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        @* @await Component.InvokeAsync("Pager", Model)*@
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="sidebar">
+	
+
+</div>
+    <div class="single-product-area">
+        
+    </div>
+*@

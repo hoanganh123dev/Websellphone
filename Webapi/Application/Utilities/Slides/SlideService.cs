@@ -1,0 +1,34 @@
+﻿using Microsoft.EntityFrameworkCore;
+using SellPhoneVIewModel.Utilities.Slides;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Webapi.EF;
+
+namespace Webapi.Application.Utilities.Slides
+{
+    public class SlideService :ISlideService
+    {
+        private readonly SellPhoneDbContext _context;
+
+        public SlideService(SellPhoneDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<SlideVm>> GetAll()
+        {
+            var slides = await _context.Slides.OrderBy(x => x.SortOrder)
+                .Select(x => new SlideVm()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Url = x.Url,
+                    Image = x.Image
+                }).ToListAsync();
+
+            return slides;
+        }
+    }
+}

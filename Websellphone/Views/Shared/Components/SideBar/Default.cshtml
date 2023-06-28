@@ -1,0 +1,54 @@
+﻿@model List<SellPhoneVIewModel.Catalog.Categories.CategoryViewModel>
+@inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
+@{
+    var culture = CultureInfo.CurrentCulture.Name;
+}
+
+<div class="sidebar">
+    <!-- ... -->
+    <div class="sidebar_section">
+        <div class="sidebar_title">
+            <h5>Product Category</h5>
+        </div>
+        <ul class="sidebar_categories">
+            @{
+                var parents = Model.Where(x => x.ParentId == null);
+
+            }
+            @for(int index = 0; index < parents.Count(); index++)
+            {
+                var parent = parents.ElementAt(index);
+                var children = Model.Where(x => x.ParentId == parent.Id);
+                if(children.Any())
+                {
+                    <li class="subMenu open">
+                        <a>@parent.Name</a>
+                        <ul>
+                           @foreach(var item in children)
+                           {
+                                <li class="active"><a href="/@culture/@_loc["categoryUrl"]/@item.Id"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>@item.Name</a></li>
+                           }
+                        </ul>
+                    </li>
+                    
+                }
+                else{
+                    <li><a href="/@culture/@_loc["categoryUrl"]/@parent.Id">@parent.Name</a></li>
+                }
+                
+            }           
+        </ul>
+    </div>
+
+    <!-- Price Range Filtering -->
+    <div class="sidebar_section">
+        <div class="sidebar_title">
+            <h5>Filter by Price</h5>
+        </div>
+        <p>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id="slider-range"></div>
+        <div class="filter_button"><span>filter</span></div>
+    </div>
+</div>

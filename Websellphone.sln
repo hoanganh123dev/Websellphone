@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Websellphone", "Websellphone\Websellphone.csproj", "{17B698D5-C3D0-4AAB-8A3E-8D6D1E73FED2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webapi", "Webapi\Webapi.csproj", "{9CF6F3E7-7589-40C1-AA22-1F44809F5DE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SellPhoneUntilities", "SellPhoneUntilities\SellPhoneUntilities.csproj", "{7A1E9B76-CC60-48B4-B48A-92E917AB1E51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SellPhoneVIewModel", "SellPhoneVIewModel\SellPhoneVIewModel.csproj", "{5B014FE3-713C-4151-963F-1DB098D67691}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsellphoneAdmin", "WebsellphoneAdmin\WebsellphoneAdmin.csproj", "{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSellPhoneApiCaller", "WebSellPhoneApiCaller\WebSellPhoneApiCaller.csproj", "{3A537BD6-680B-4D64-A4C5-127D5D96B114}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17B698D5-C3D0-4AAB-8A3E-8D6D1E73FED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B698D5-C3D0-4AAB-8A3E-8D6D1E73FED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B698D5-C3D0-4AAB-8A3E-8D6D1E73FED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B698D5-C3D0-4AAB-8A3E-8D6D1E73FED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF6F3E7-7589-40C1-AA22-1F44809F5DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF6F3E7-7589-40C1-AA22-1F44809F5DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF6F3E7-7589-40C1-AA22-1F44809F5DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF6F3E7-7589-40C1-AA22-1F44809F5DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1E9B76-CC60-48B4-B48A-92E917AB1E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1E9B76-CC60-48B4-B48A-92E917AB1E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1E9B76-CC60-48B4-B48A-92E917AB1E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1E9B76-CC60-48B4-B48A-92E917AB1E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B014FE3-713C-4151-963F-1DB098D67691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B014FE3-713C-4151-963F-1DB098D67691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B014FE3-713C-4151-963F-1DB098D67691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B014FE3-713C-4151-963F-1DB098D67691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A537BD6-680B-4D64-A4C5-127D5D96B114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A537BD6-680B-4D64-A4C5-127D5D96B114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A537BD6-680B-4D64-A4C5-127D5D96B114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A537BD6-680B-4D64-A4C5-127D5D96B114}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C9431C9-16FC-48CC-956E-284A7C745B87}
+	EndGlobalSection
+EndGlobal
